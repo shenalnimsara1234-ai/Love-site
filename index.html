@@ -23,80 +23,15 @@
                 <div class="input-group">
                     <label for="username">💝 Your Lover's Name</label>
                     <input type="text" id="username" placeholder="Enter your lover's name...">
-                    <p class="hint" id="username-hint"></p>
+                    <p class="hint" id="username-hint">What I always call you...</p>
                 </div>
                 <div class="input-group">
                     <label for="password">🔐 Secret Word</label>
                     <input type="password" id="password" placeholder="Enter the secret word...">
-                    <p class="hint" id="password-hint"></p>
+                    <p class="hint" id="password-hint">What we promised each other...</p>
                 </div>
                 <button class="btn-login" onclick="login()">Open My Heart 💖</button>
                 <p id="login-error" class="error-msg"></p>
-            </div>
-            <div class="setup-link">
-                <p>First time? <a href="#" onclick="showSetup()">Set up your love page 💌</a></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Setup Page (one-time config) -->
-    <div id="setup-page" class="page">
-        <div class="floating-hearts">
-            <span>💕</span><span>❤️</span><span>💗</span><span>💖</span><span>💕</span>
-            <span>❤️</span><span>💗</span><span>💖</span><span>💕</span><span>❤️</span>
-        </div>
-        <div class="setup-container">
-            <h1>💌 Set Up Your Love Page</h1>
-            <p class="subtitle">Configure the credentials for your special someone</p>
-            <div class="setup-form">
-                <div class="input-group">
-                    <label>💝 Your Lover's Name (Username)</label>
-                    <input type="text" id="setup-username" placeholder="e.g. My Sunshine">
-                </div>
-                <div class="input-group">
-                    <label>💡 Hint for the Name</label>
-                    <input type="text" id="setup-username-hint" placeholder="e.g. What I always call you...">
-                </div>
-                <div class="input-group">
-                    <label>🔐 Secret Word (Password)</label>
-                    <input type="text" id="setup-password" placeholder="e.g. forever">
-                </div>
-                <div class="input-group">
-                    <label>💡 Hint for the Secret Word</label>
-                    <input type="text" id="setup-password-hint" placeholder="e.g. What we promised each other...">
-                </div>
-                <hr class="divider">
-                <h2>🎵 Love Song</h2>
-                <div class="input-group">
-                    <label>YouTube Video URL</label>
-                    <input type="text" id="setup-youtube" placeholder="e.g. https://www.youtube.com/watch?v=...">
-                </div>
-                <hr class="divider">
-                <h2>💌 Love Letter</h2>
-                <div class="input-group">
-                    <label>Your Lovely Message</label>
-                    <textarea id="setup-message" rows="5" placeholder="Write your heartfelt message here..."></textarea>
-                </div>
-                <hr class="divider">
-                <h2>❤️ 4 Reasons Why I Love You</h2>
-                <div class="input-group">
-                    <label>Reason 1</label>
-                    <input type="text" id="setup-reason1" placeholder="Your smile lights up my world...">
-                </div>
-                <div class="input-group">
-                    <label>Reason 2</label>
-                    <input type="text" id="setup-reason2" placeholder="You understand me like no one else...">
-                </div>
-                <div class="input-group">
-                    <label>Reason 3</label>
-                    <input type="text" id="setup-reason3" placeholder="Every moment with you is magical...">
-                </div>
-                <div class="input-group">
-                    <label>Reason 4</label>
-                    <input type="text" id="setup-reason4" placeholder="You make me a better person...">
-                </div>
-                <button class="btn-login" onclick="saveSetup()">Save & Go to Login 💖</button>
-                <p id="setup-error" class="error-msg"></p>
             </div>
         </div>
     </div>
@@ -159,28 +94,28 @@
                         <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=300&fit=crop" alt="Reason 1">
                     </div>
                     <div class="reason-number">1</div>
-                    <p class="reason-text" id="reason1-text">Your smile lights up my entire world</p>
+                    <p class="reason-text">Your smile lights up my entire world</p>
                 </div>
                 <div class="reason-card">
                     <div class="reason-image">
                         <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=400&h=300&fit=crop" alt="Reason 2">
                     </div>
                     <div class="reason-number">2</div>
-                    <p class="reason-text" id="reason2-text">You understand me like no one else</p>
+                    <p class="reason-text">You understand me like no one else</p>
                 </div>
                 <div class="reason-card">
                     <div class="reason-image">
                         <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=400&h=300&fit=crop" alt="Reason 3">
                     </div>
                     <div class="reason-number">3</div>
-                    <p class="reason-text" id="reason3-text">Every moment with you feels magical</p>
+                    <p class="reason-text">Every moment with you feels magical</p>
                 </div>
                 <div class="reason-card">
                     <div class="reason-image">
                         <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=400&h=300&fit=crop" alt="Reason 4">
                     </div>
                     <div class="reason-number">4</div>
-                    <p class="reason-text" id="reason4-text">You make me want to be a better person every day</p>
+                    <p class="reason-text">You make me want to be a better person every day</p>
                 </div>
             </div>
             <button class="btn-back" onclick="showPage('menu-page')">⬅ Back to Menu</button>
@@ -197,7 +132,7 @@
             <h1>🎵 Our Love Song 🎵</h1>
             <p class="song-subtitle">This song always reminds me of you...</p>
             <div class="video-wrapper">
-                <iframe id="youtube-player" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="youtube-player" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <button class="btn-back" onclick="showPage('menu-page')">⬅ Back to Menu</button>
         </div>
@@ -215,7 +150,7 @@
                 <div class="letter-header">
                     <p>My Dearest Love,</p>
                 </div>
-                <div class="letter-body" id="letter-body">
+                <div class="letter-body">
                     <p>Every day with you is a blessing. You are my sunshine, my happiness, and my everything. I cannot imagine my life without you. You make every moment special and every day worth living. I love you more than words could ever express. 💕</p>
                 </div>
                 <div class="letter-footer">
