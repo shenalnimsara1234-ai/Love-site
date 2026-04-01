@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 I Love You 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Page 1: Login -->
+    <div id="login-page" class="page active">
+        <div class="floating-hearts">
+            <span>💕</span><span>❤️</span><span>💗</span><span>💖</span><span>💕</span>
+            <span>❤️</span><span>💗</span><span>💖</span><span>💕</span><span>❤️</span>
+        </div>
+        <div class="login-container">
+            <div class="login-header">
+                <h1>💕 I Love You 💕</h1>
+                <p class="subtitle">A special place just for us</p>
+            </div>
+            <div class="login-form">
+                <div class="input-group">
+                    <label for="username">💝 Your Lover's Name</label>
+                    <input type="text" id="username" placeholder="Enter your lover's name...">
+                    <p class="hint" id="username-hint"></p>
+                </div>
+                <div class="input-group">
+                    <label for="password">🔐 Secret Word</label>
+                    <input type="password" id="password" placeholder="Enter the secret word...">
+                    <p class="hint" id="password-hint"></p>
+                </div>
+                <button class="btn-login" onclick="login()">Open My Heart 💖</button>
+                <p id="login-error" class="error-msg"></p>
+            </div>
+            <div class="setup-link">
+                <p>First time? <a href="#" onclick="showSetup()">Set up your love page 💌</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Setup Page (one-time config) -->
+    <div id="setup-page" class="page">
+        <div class="floating-hearts">
+            <span>💕</span><span>❤️</span><span>💗</span><span>💖</span><span>💕</span>
+            <span>❤️</span><span>💗</span><span>💖</span><span>💕</span><span>❤️</span>
+        </div>
+        <div class="setup-container">
+            <h1>💌 Set Up Your Love Page</h1>
+            <p class="subtitle">Configure the credentials for your special someone</p>
+            <div class="setup-form">
+                <div class="input-group">
+                    <label>💝 Your Lover's Name (Username)</label>
+                    <input type="text" id="setup-username" placeholder="e.g. My Sunshine">
+                </div>
+                <div class="input-group">
+                    <label>💡 Hint for the Name</label>
+                    <input type="text" id="setup-username-hint" placeholder="e.g. What I always call you...">
+                </div>
+                <div class="input-group">
+                    <label>🔐 Secret Word (Password)</label>
+                    <input type="text" id="setup-password" placeholder="e.g. forever">
+                </div>
+                <div class="input-group">
+                    <label>💡 Hint for the Secret Word</label>
+                    <input type="text" id="setup-password-hint" placeholder="e.g. What we promised each other...">
+                </div>
+                <hr class="divider">
+                <h2>🎵 Love Song</h2>
+                <div class="input-group">
+                    <label>YouTube Video URL</label>
+                    <input type="text" id="setup-youtube" placeholder="e.g. https://www.youtube.com/watch?v=...">
+                </div>
+                <hr class="divider">
+                <h2>💌 Love Letter</h2>
+                <div class="input-group">
+                    <label>Your Lovely Message</label>
+                    <textarea id="setup-message" rows="5" placeholder="Write your heartfelt message here..."></textarea>
+                </div>
+                <hr class="divider">
+                <h2>❤️ 4 Reasons Why I Love You</h2>
+                <div class="input-group">
+                    <label>Reason 1</label>
+                    <input type="text" id="setup-reason1" placeholder="Your smile lights up my world...">
+                </div>
+                <div class="input-group">
+                    <label>Reason 2</label>
+                    <input type="text" id="setup-reason2" placeholder="You understand me like no one else...">
+                </div>
+                <div class="input-group">
+                    <label>Reason 3</label>
+                    <input type="text" id="setup-reason3" placeholder="Every moment with you is magical...">
+                </div>
+                <div class="input-group">
+                    <label>Reason 4</label>
+                    <input type="text" id="setup-reason4" placeholder="You make me a better person...">
+                </div>
+                <button class="btn-login" onclick="saveSetup()">Save & Go to Login 💖</button>
+                <p id="setup-error" class="error-msg"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2: Main Menu (3 Buttons) -->
+    <div id="menu-page" class="page">
+        <div class="floating-hearts">
+            <span>💕</span><span>❤️</span><span>💗</span><span>💖</span><span>💕</span>
+            <span>❤️</span><span>💗</span><span>💖</span><span>💕</span><span>❤️</span>
+        </div>
+        <div class="menu-container">
+            <h1 class="welcome-title">Welcome, My Love 💕</h1>
+            <p class="menu-subtitle">I made this just for you...</p>
+            <div class="menu-buttons">
+                <div class="menu-card" onclick="showPage('reasons-page')">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=300&fit=crop" alt="Love Reasons">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-emoji">💝</span>
+                        <h3>Reasons Why I Love You</h3>
+                        <p>Discover what makes you special to me</p>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="showPage('song-page')">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=300&fit=crop" alt="Our Love Song">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-emoji">🎵</span>
+                        <h3>Our Love Song</h3>
+                        <p>A melody that reminds me of us</p>
+                    </div>
+                </div>
+                <div class="menu-card" onclick="showPage('message-page')">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&h=300&fit=crop" alt="Love Message">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-emoji">💌</span>
+                        <h3>A Lovely Message From Me</h3>
+                        <p>Words from the bottom of my heart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Reasons Why I Love You -->
+    <div id="reasons-page" class="page">
+        <div class="floating-hearts">
+            <span>💕</span><span>❤️</span><span>💗</span><span>💖</span><span>💕</span>
+            <span>❤️</span><span>💗</span><span>💖</span><span>💕</span><span>❤️</span>
+        </div>
+        <div class="reasons-container">
+            <h1>💝 Reasons Why I Love You</h1>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-image">
+                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=300&fit=crop" alt="Reason 1">
+                    </div>
+                    <div class="reason-number">1</div>
+                    <p class="reason-text" id="reason1-text">Your smile lights up my entire world</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-image">
+                        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=400&h=300&fit=crop" alt="Reason 2">
+                    </div>
+                    <div class="reason-number">2</div>
+                    <p class="reason-text" id="reason2-text">You understand me like no one else</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-image">
+                        <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=400&h=300&fit=crop" alt="Reason 3">
+                    </div>
+                    <div class="reason-number">3</div>
+                    <p class="reason-text" id="reason3-text">Every moment with you feels magical</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-image">
+                        <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=400&h=300&fit=crop" alt="Reason 4">
+                    </div>
+                    <div class="reason-number">4</div>
+                    <p class="reason-text" id="reason4-text">You make me want to be a better person every day</p>
+                </div>
+            </div>
+            <button class="btn-back" onclick="showPage('menu-page')">⬅ Back to Menu</button>
+        </div>
+    </div>
+
+    <!-- Page 4: Our Love Song -->
+    <div id="song-page" class="page">
+        <div class="floating-hearts">
+            <span>💕</span><span>❤️</span><span>💗</span><span>💖</span><span>💕</span>
+            <span>❤️</span><span>💗</span><span>💖</span><span>💕</span><span>❤️</span>
+        </div>
+        <div class="song-container">
+            <h1>🎵 Our Love Song 🎵</h1>
+            <p class="song-subtitle">This song always reminds me of you...</p>
+            <div class="video-wrapper">
+                <iframe id="youtube-player" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <button class="btn-back" onclick="showPage('menu-page')">⬅ Back to Menu</button>
+        </div>
+    </div>
+
+    <!-- Page 5: Lovely Message -->
+    <div id="message-page" class="page">
+        <div class="floating-hearts">
+            <span>💕</span><span>❤️</span><span>💗</span><span>💖</span><span>💕</span>
+            <span>❤️</span><span>💗</span><span>💖</span><span>💕</span><span>❤️</span>
+        </div>
+        <div class="message-container">
+            <h1>💌 A Message From My Heart</h1>
+            <div class="love-letter">
+                <div class="letter-header">
+                    <p>My Dearest Love,</p>
+                </div>
+                <div class="letter-body" id="letter-body">
+                    <p>Every day with you is a blessing. You are my sunshine, my happiness, and my everything. I cannot imagine my life without you. You make every moment special and every day worth living. I love you more than words could ever express. 💕</p>
+                </div>
+                <div class="letter-footer">
+                    <p>Forever yours,<br>With all my love 💖</p>
+                </div>
+            </div>
+
+            <div class="do-you-love-me" id="love-question">
+                <h2>Do You Love Me? 💕</h2>
+                <div class="love-buttons">
+                    <button class="btn-yes" onclick="answerYes()">Yes, I Do! ❤️</button>
+                    <button class="btn-no" id="no-btn" onclick="answerNo()">No 💔</button>
+                </div>
+            </div>
+
+            <button class="btn-back" onclick="showPage('menu-page')">⬅ Back to Menu</button>
+        </div>
+    </div>
+
+    <!-- Yes Popup -->
+    <div id="yes-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-hearts">💕💖💕💖💕</div>
+            <h1>Yaaay! 🥰</h1>
+            <p class="popup-message">I knew it! You make my heart so happy! I love you to the moon and back! We are meant to be together forever! 💕✨</p>
+            <div class="popup-hearts">💕💖💕💖💕</div>
+            <button class="btn-close-popup" onclick="closePopup()">Close 💖</button>
+        </div>
+    </div>
+
+    <!-- No / Try Again -->
+    <div id="try-again-popup" class="popup-overlay">
+        <div class="popup-content try-again">
+            <h1>😢 Are you sure?</h1>
+            <p class="popup-message">My heart can't take it... Please think again! 💔</p>
+            <button class="btn-try-again" onclick="tryAgain()">Try Again 💕</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
