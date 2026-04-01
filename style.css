@@ -179,45 +179,6 @@ body {
     text-decoration: underline;
 }
 
-/* ===== Setup Page ===== */
-.setup-container {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 24px;
-    padding: 40px;
-    max-width: 550px;
-    width: 100%;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    text-align: center;
-    max-height: 90vh;
-    overflow-y: auto;
-    backdrop-filter: blur(10px);
-}
-
-.setup-container h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
-    color: #e91e63;
-    margin-bottom: 5px;
-}
-
-.setup-container h2 {
-    font-family: 'Dancing Script', cursive;
-    color: #e91e63;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.setup-form {
-    text-align: left;
-    margin-top: 20px;
-}
-
-.divider {
-    border: none;
-    border-top: 2px dashed #f8bbd0;
-    margin: 25px 0;
-}
 
 /* ===== Menu Page ===== */
 .menu-container {
@@ -739,4 +700,267 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(233, 30, 99, 0.6);
+}
+
+
+
+/* ============================================
+   📱 MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .menu-buttons {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Login Page */
+    .login-container {
+        width: 90%;
+        max-width: 400px;
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
+
+    .login-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .login-header .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .input-group label {
+        font-size: 0.9rem;
+    }
+
+    .input-group input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .btn-login {
+        padding: 12px 24px;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    /* Menu Page */
+    .menu-container {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    .welcome-title {
+        font-size: 1.6rem;
+    }
+
+    .menu-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .menu-buttons {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .menu-card {
+        max-width: 100%;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+    }
+
+    .card-image img {
+        height: 180px;
+    }
+
+    /* Reasons Page */
+    .reasons-container {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    .reasons-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .reason-card {
+        max-width: 100%;
+    }
+
+    .reason-image img {
+        height: 180px;
+    }
+
+    .reason-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .reason-text {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    /* Song Page */
+    .song-container {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    .song-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Message Page */
+    .message-container {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    .message-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .love-letter {
+        padding: 20px 15px;
+        font-size: 0.95rem;
+    }
+
+    .letter-body p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* Do You Love Me */
+    .do-you-love-me h2 {
+        font-size: 1.3rem;
+    }
+
+    .love-buttons {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .btn-yes,
+    .btn-no {
+        width: 80%;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    /* Popups */
+    .popup-content {
+        width: 90%;
+        max-width: 350px;
+        padding: 25px 20px;
+    }
+
+    .popup-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .popup-message {
+        font-size: 0.9rem;
+    }
+
+    /* Back Button */
+    .btn-back {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Floating Hearts */
+    .floating-hearts span {
+        font-size: 1.2rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .login-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-title {
+        font-size: 1.3rem;
+    }
+
+    .reasons-container h1,
+    .song-container h1,
+    .message-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .card-image img,
+    .reason-image img {
+        height: 150px;
+    }
+
+    .love-letter {
+        padding: 15px 12px;
+    }
+
+    .letter-body p {
+        font-size: 0.88rem;
+    }
+
+    .popup-content {
+        width: 92%;
+        padding: 20px 15px;
+    }
+
+    .popup-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .btn-yes,
+    .btn-no {
+        width: 90%;
+    }
 }
