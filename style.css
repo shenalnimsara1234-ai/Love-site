@@ -402,16 +402,6 @@ body {
     margin-bottom: 30px;
 }
 
-.love-letter::before {
-    content: '💌';
-    position: absolute;
-    top: -18px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    background: #fffef5;
-    padding: 0 10px;
-}
 
 .letter-header p {
     font-family: 'Dancing Script', cursive;
