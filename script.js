@@ -2,7 +2,7 @@
 // 🔒 FIXED CREDENTIALS — Change these values!
 // ============================================
 const FIXED_USERNAME = "Kavindu";      // Change to your lover's name
-const FIXED_PASSWORD = "ILU";          // Change to your secret word
+const FIXED_PASSWORD = "iloveyou";          // Change to your secret word
 
 // ============================================
 // 🔑 Login Function
