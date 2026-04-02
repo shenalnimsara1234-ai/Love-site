@@ -132,8 +132,22 @@
             <h1>🎵 Our Love Song 🎵</h1>
             <p class="song-subtitle">This song always reminds me of you...</p>
             <div class="video-wrapper">
-                <iframe id="youtube-player" src="https://www.youtube.com/embed/wcS0IZt1IiQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe 
+                    id="youtube-player" 
+                    src="https://www.youtube.com/embed/wcS0IZt1IiQ?playsinline=1&rel=0" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    style="border:0;">
+                </iframe>
             </div>
+            <p style="text-align:center; margin-top:10px;">
+                <a href="https://www.youtube.com/watch?v=wcS0IZt1IiQ" target="_blank" rel="noopener noreferrer" style="color:#ff6b9d; text-decoration:none; font-size:0.85rem;">
+                    Can't see the video? Tap here 🎵
+                </a>
+            </p>
             <button class="btn-back" onclick="showPage('menu-page')">⬅ Back to Menu</button>
         </div>
     </div>
