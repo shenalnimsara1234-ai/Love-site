@@ -163,23 +163,6 @@ body {
     min-height: 20px;
 }
 
-.setup-link {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-.setup-link a {
-    color: #e91e63;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.setup-link a:hover {
-    text-decoration: underline;
-}
-
-
 /* ===== Menu Page ===== */
 .menu-container {
     z-index: 1;
@@ -373,6 +356,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    border: 0;
 }
 
 /* ===== Message Page ===== */
@@ -401,7 +385,6 @@ body {
     border: 2px solid #f8bbd0;
     margin-bottom: 30px;
 }
-
 
 .letter-header p {
     font-family: 'Dancing Script', cursive;
@@ -606,74 +589,6 @@ body {
     transform: scale(1.05);
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-    .login-container,
-    .setup-container {
-        padding: 25px;
-        margin: 10px;
-    }
-
-    .login-header h1 {
-        font-size: 2rem;
-    }
-
-    .welcome-title {
-        font-size: 2.2rem;
-    }
-
-    .menu-buttons {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-card {
-        max-width: 350px;
-    }
-
-    .reasons-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
-    }
-
-    .reasons-container h1,
-    .song-container h1,
-    .message-container h1 {
-        font-size: 2rem;
-    }
-
-    .love-letter {
-        padding: 25px;
-    }
-
-    .popup-content {
-        padding: 25px;
-    }
-
-    .popup-content h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .page {
-        padding: 10px;
-    }
-
-    .reasons-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .love-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn-yes, .btn-no {
-        width: 100%;
-        max-width: 250px;
-    }
-}
-
 /* ===== Scrollbar ===== */
 ::-webkit-scrollbar {
     width: 8px;
@@ -692,13 +607,9 @@ body {
     background: rgba(233, 30, 99, 0.6);
 }
 
-
-
 /* ============================================
-   📱 MOBILE RESPONSIVE STYLES
+   📱 RESPONSIVE — Tablets
    ============================================ */
-
-/* Tablets and smaller desktops */
 @media (max-width: 1024px) {
     .menu-buttons {
         grid-template-columns: 1fr 1fr;
@@ -711,13 +622,14 @@ body {
     }
 }
 
-/* Mobile devices */
+/* ============================================
+   📱 RESPONSIVE — Mobile
+   ============================================ */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
     }
 
-    /* Login Page */
     .login-container {
         width: 90%;
         max-width: 400px;
@@ -748,7 +660,6 @@ body {
         width: 100%;
     }
 
-    /* Menu Page */
     .menu-container {
         width: 90%;
         padding: 20px 15px;
@@ -784,7 +695,6 @@ body {
         height: 180px;
     }
 
-    /* Reasons Page */
     .reasons-container {
         width: 90%;
         padding: 20px 15px;
@@ -818,7 +728,6 @@ body {
         padding: 10px;
     }
 
-    /* Song Page */
     .song-container {
         width: 90%;
         padding: 20px 15px;
@@ -828,23 +737,6 @@ body {
         font-size: 1.6rem;
     }
 
-    .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-        border-radius: 12px;
-    }
-
-    .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* Message Page */
     .message-container {
         width: 90%;
         padding: 20px 15px;
@@ -864,7 +756,6 @@ body {
         line-height: 1.7;
     }
 
-    /* Do You Love Me */
     .do-you-love-me h2 {
         font-size: 1.3rem;
     }
@@ -882,7 +773,6 @@ body {
         font-size: 1rem;
     }
 
-    /* Popups */
     .popup-content {
         width: 90%;
         max-width: 350px;
@@ -897,7 +787,6 @@ body {
         font-size: 0.9rem;
     }
 
-    /* Back Button */
     .btn-back {
         padding: 10px 20px;
         font-size: 0.9rem;
@@ -905,14 +794,19 @@ body {
         max-width: 250px;
     }
 
-    /* Floating Hearts */
     .floating-hearts span {
         font-size: 1.2rem;
     }
 }
 
-/* Small phones */
+/* ============================================
+   📱 RESPONSIVE — Small Phones
+   ============================================ */
 @media (max-width: 480px) {
+    .page {
+        padding: 10px;
+    }
+
     .login-header h1 {
         font-size: 1.5rem;
     }
@@ -925,6 +819,10 @@ body {
     .song-container h1,
     .message-container h1 {
         font-size: 1.3rem;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
     }
 
     .card-image img,
@@ -940,17 +838,23 @@ body {
         font-size: 0.88rem;
     }
 
-    .popup-content {
-        width: 92%;
-        padding: 20px 15px;
-    }
-
-    .popup-content h1 {
-        font-size: 1.3rem;
+    .love-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 
     .btn-yes,
     .btn-no {
         width: 90%;
+        max-width: 250px;
     }
-}
+
+        .popup-content {
+            width: 92%;
+            padding: 20px 15px;
+        }
+    
+        .popup-content h1 {
+            font-size: 1.3rem;
+        }
+    }
